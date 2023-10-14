@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            background-image: url('your-background-image.jpg');
+            /* Replace with your image URL */
+            background-size: cover;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded shadow-md w-96">
+        <h2 class="text-2xl font-semibold mb-4">Login</h2>
+        <form id="login-form">
+            <div class="mb-4">
+                <input type="text" id="username"
+                    class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500"
+                    placeholder="Username">
+            </div>
+            <div class="mb-4">
+                <input type="email" id="email"
+                    class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500"
+                    placeholder="Email">
+            </div>
+            <div class="mb-4">
+                <input type="password" id="password"
+                    class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500"
+                    placeholder="Password">
+            </div>
+            <div class="mb-4">
+                <input type="password" id="confirm-password"
+                    class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500"
+                    placeholder="Confirm Password">
+            </div>
+            <div class="mb-4">
+                <button class="bg-red-500 text-white font-semibold py-2 px-4 rounded-full w-full">
+                    Login with Google
+                </button>
+            </div>
+            <div>
+                <button type="submit"
+                    class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full w-full">
+                    Sign Up
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (!username || !email || !password || !confirmPassword) {
+                alert('All fields are required');
+            } else {
+                alert('Form submitted successfully');
+                // You can add form submission logic here
+            }
+        });
+    </script>
+    <div id="login"></div>
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>

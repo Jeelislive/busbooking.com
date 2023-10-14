@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking App</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <header class="bg-blue-500 text-white p-4">
+        <h1 class="text-4xl font-extrabold">Bus Booking App</h1>
+        <p class="text-lg mt-2">Find and book your next bus journey with ease.</p>
+    </header>
+
+    <main class="container mx-auto py-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">Book Your Bus Ticket</h2>
+            <form class="space-y-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label for="departure">Departure</label>
+                        <input type="text" id="departure"
+                            class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500"
+                            placeholder="Enter departure location">
+                    </div>
+                    <div>
+                        <label for="destination">Destination</label>
+                        <input type="text" id="destination"
+                            class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500"
+                            placeholder="Enter destination location">
+                    </div>
+                </div>
+                <div>
+                    <label for="date">Date</label>
+                    <input type="date" id="date"
+                        class="w-full border border-gray-300 rounded-lg p-2 focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <button type="submit"
+                        class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-lg">Search
+                        Buses</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <div id="bookbus"></div>
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>

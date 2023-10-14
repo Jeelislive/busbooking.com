@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 p-8">
+    <div class="bg-white p-4 rounded-md shadow-md">
+        <h2 class="text-2xl font-semibold mb-4">Ticket Details</h2>
+        <div class="box1">
+            <p><strong>Passenger Name:</strong> <input class="border-2 rounded border-black p-1 m-2" type="text"
+                    placeholder="enter a name">
+            </p>
+
+            <p><strong>Ticket Number:</strong><input class="border-2 rounded border-black p-1 m-2" type="text"
+                    placeholder="123456789"></p>
+            <p><strong>Departure Date:</strong> <input class="border-2 rounded border-black p-1 m-2" type="text"
+                    placeholder="DD/MM/YY"></p>
+            <p><strong>Origin:</strong> <input class="border-2 rounded border-black p-1 m-2" type="text"
+                    placeholder="enter a Origin"></p>
+            <p><strong>Destination:</strong> <input class="border-2 rounded border-black p-1 m-2" type="text"
+                    placeholder="enter a Destination"></p>
+            <p><strong>Price:</strong><input class="border-2 rounded border-black p-1 m-2" type="text"
+                    placeholder="$55.00"></p>
+        </div>
+        <div class="mt-4">
+            <button class="bg-red-500 text-white font-semibold py-2 px-4 rounded-full" onclick="refundTicket()">
+                Refund Ticket
+            </button>
+        </div>
+        <div class="mt-4">
+            <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full">
+                Book Another Ticket
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function refundTicket() {
+            // You can implement the refund ticket logic here
+            alert('Ticket refunded successfully');
+        }
+    </script>
+    <div id="refund"></div>
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
